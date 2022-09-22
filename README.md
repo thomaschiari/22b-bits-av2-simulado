@@ -58,28 +58,36 @@ A presença de papel na bandeja de alimentação é indicada por um nível ALTO 
 
 ## Questão 3
 
-| Arquivo            | pnts   |
-| ------------------ | ------ |
-| Resolução no papel | 6 (HW) |
-| `exe3(x, y, z)`    | 4 (HW) |
-
-- Testar com: `pytest -k exe3 -s`
+| Arquivo                | pnts   |
+| ---------------------- | ------ |
+| (a) Resolução no papel | 6 (HW) |
+| (b) `exe3(x, y, z)`    | 4 (HW) |
 
 A Figura a seguir representa um circuito multiplicador de números inteiros positivos (unsigned) que recebe dois números binários de dois bits: `x1x0` e `y1y0` e gera um número binário de quatro bits de saída: `z3z2z1z0` igual ao produto aritmético dos dois números de entrada.
 
 ![](3a.png)
 
-- `x1`, `x0`, `y1`, `y0`: São entradas do tipo `bool()`
-- `z3`, `z2`, `z1`, `z0`: Saída do tipo `bool()`
+### (a)
+
+> No papel
 
 Encontre a equação que realiza a multiplicação entre dois vetores de dois bits cada x e y e resulta em um vetor de quatro bits z e então implemente a solução em MyHDL.
 
+### (b)
+
+Implemente em MyHDL a solução para o multiplicador.
+
+- Testar com: `pytest -k exe3 -s`
+
+- `x1`, `x0`, `y1`, `y0`: São entradas do tipo `bool()`
+- `z3`, `z2`, `z1`, `z0`: Saída do tipo `bool()`
+
 ## Questão 4
 
-| Arquivo | pnts   |
-| ------- | ------ |
-| (a)     | 6 (HW) |
-| (b)     | 8 (HW) |
+| Arquivo                | pnts   |
+| ---------------------- | ------ |
+| (a) Resolução no papel | 6 (HW) |
+| (b) `exe4_ula`         | 8 (HW) |
 
 A ULA a seguir é utilizada no processador chamado MIPS:
 
@@ -95,7 +103,7 @@ A seleção de cada mux está indicada no desenho. Por exemplo, no mux `Inverte 
 
 ### (a) Entendendo a ULA
 
-> Seria uma das questões teóricas feitas no papel!
+> No papel
 
 Preencha o estado dos pinos de controle para cada uma das funções abaixo.
 
@@ -117,6 +125,8 @@ Preencha o estado dos pinos de controle para cada uma das funções abaixo.
 | Arquivo                                                                       | pnts   |
 | ----------------------------------------------------------------------------- | ------ |
 | `exe4_ula(a, b, inverte_a, inverte_b, c_in, c_out, selecao, zero, resultado)` | 6 (HW) |
+
+- Testar com `pytest -k exe4_ula`
 
 Implemente a ULA em MyHDL utilizando os componentes (que já estão implementados no arquivo `ula_aux.py`): `mux2Way`, `adder`, `mux4way` .
 
