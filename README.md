@@ -33,6 +33,8 @@ Implemente o circuito a seguir em MyHDL
 
 ![](1a.png)
 
+Saiba que:
+
 - `a`, `b`, `c` e `q`: São sinais do tipo `bool`
 
 ## Questão 2
@@ -78,6 +80,8 @@ Encontre a equação que realiza a multiplicação entre dois vetores de dois bi
 Implemente em MyHDL a solução para o multiplicador.
 
 - Testar com: `pytest -k exe3 -s`
+
+Saiba que:
 
 - `x1`, `x0`, `y1`, `y0`: São entradas do tipo `bool()`
 - `z3`, `z2`, `z1`, `z0`: Saída do tipo `bool()`
@@ -129,6 +133,14 @@ Preencha o estado dos pinos de controle para cada uma das funções abaixo.
 - Testar com `pytest -k exe4_ula`
 
 Implemente a ULA em MyHDL utilizando os componentes (que já estão implementados no arquivo `ula_aux.py`): `mux2Way`, `adder`, `mux4way` .
+
+Se atente aos tipos de dados das entradas e saídas:
+
+```python
+    a, b, resultado = [Signal(modbv(0)[32:]) for i in range(3)]
+    inverte_a, inverte_b, c_in, c_out, zero = [Signal(bool(0)) for i in range(5)]
+    selecao = Signal(modbv(0)[2:])
+```
 
 ## Extras
 
