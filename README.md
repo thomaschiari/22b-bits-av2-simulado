@@ -31,7 +31,7 @@ Você deve:
 
 Implemente o circuito a seguir em MyHDL
 
-![](figs/1a.png)
+![](1a.png)
 
 - `a`, `b`, `c` e `q`: São sinais do tipo `bool`
 
@@ -52,7 +52,7 @@ Veja a Figura a seguir. Em uma simples máquina copiadora, um sinal de parada (S
 
 A presença de papel na bandeja de alimentação é indicada por um nível ALTO no sinal lógico P. Cada uma das microchaves (P,Q) produz sinais lógicos ALTO sempre que um papel estiver passando por ela.
 
-![](figs/2a.png)
+![](2a.png)
 
 - `p`, `q`, `r` e `s`: São sinais do tipo `bool`
 
@@ -60,7 +60,7 @@ A presença de papel na bandeja de alimentação é indicada por um nível ALTO 
 
 | Arquivo            | pnts   |
 | ------------------ | ------ |
-| Resolução no papel | 4 (HW) |
+| Resolução no papel | 6 (HW) |
 | `exe3(x, y, z)`    | 4 (HW) |
 
 - Testar com: `pytest -k exe3 -s`
@@ -78,8 +78,8 @@ Encontre a equação que realiza a multiplicação entre dois vetores de dois bi
 
 | Arquivo | pnts   |
 | ------- | ------ |
-| (a)     | 4 (HW) |
-| (b)     | 6 (HW) |
+| (a)     | 6 (HW) |
+| (b)     | 8 (HW) |
 
 A ULA a seguir é utilizada no processador chamado MIPS:
 
