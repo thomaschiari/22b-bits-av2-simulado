@@ -1,8 +1,5 @@
 # AV2 - Simulado - bits e proc
 
-1. Teórica (blackboard)
-1. Prática (github)
-
 Você possui um total de 1h20 para realizar a avaliação, você pode decidir
 como usar o seu tempo.
 
