@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from myhdl import *
-from .componentes import *
+from componentes import *
 
 vec_exe1 = ["1101", "1111", "0111", "0100", "0010", "1010"]
 
@@ -81,17 +81,17 @@ def test_exe4_ula():
 
         selecao.next = 0
         yield delay(1)
-        assert resultado == (a and b)
+        assert resultado == (a & b)
 
         selecao.next = 1
         yield delay(1)
-        assert resultado == (a or b)
+        assert resultado == (a | b)
 
         selecao.next = 1
         inverte_a.next = 1
         inverte_b.next = 1
         yield delay(1)
-        assert resultado == ((not a) or (not b))
+        assert resultado == ((not a) | (not b))
 
         selecao.next = 2
         inverte_a.next = 0

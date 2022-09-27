@@ -6,7 +6,7 @@
 
 
 from myhdl import *
-from .ula_aux import *
+from ula_aux import *
 
 
 def exe1(a, b, c, q):
@@ -58,8 +58,8 @@ def exe4_ula(a, b, inverte_a, inverte_b, c_in, c_out, selecao, zero, resultado):
         aneg.next = not a
         bneg.next = not b
 
-        andout.next = iaout and ibout
-        orout.next = iaout or ibout
+        andout.next = iaout & ibout
+        orout.next = iaout | ibout
 
         zero_ = False
         for i in range(len(muxout)):
