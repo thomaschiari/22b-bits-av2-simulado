@@ -144,7 +144,7 @@ Se atente aos tipos de dados das entradas e saídas:
 
 ## Extras
 
-Ideias que eu tive ideia quando estava construindo o simulado:
+Ideias que eu tive quando estava bolando o simulado:
 
 - Perguntar como a ULA da família 7400 funciona: https://en.wikipedia.org/wiki/74181
 
