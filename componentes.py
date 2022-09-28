@@ -6,21 +6,38 @@
 
 
 from myhdl import *
-from .ula_aux import *
+from ula_aux import *
 
 
 def exe1(a, b, c, q):
+
+    saida1 = Signal(bool(0))
+    saida2 = Signal(bool(0))
+    saida3 = Signal(bool(0))
+    saida4 = Signal(bool(0))
+    
     @always_comb
     def comb():
-        q.next = 0
+
+        saida1 = a and b
+        saida2 = b or c
+        saida3 = b and c
+        saida4 = saida2 and saida3
+
+        q.next = saida1 or saida4
 
     return instances()
 
 
 def exe2(p, q, r, s):
+
+    saida_s = Signal(bool(0))
+    
     @always_comb
     def comb():
-        s.next = 0
+        saida_s = not p or (q and r)
+
+        s.next = saida_s
 
     return instances()
 
