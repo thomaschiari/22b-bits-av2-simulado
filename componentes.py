@@ -76,7 +76,8 @@ def exe4_ula(a, b, inverte_a, inverte_b, c_in, c_out, selecao, zero, resultado):
     mux_b = mux2way(b_out, b, b_inv, inverte_b)
     sum_out = Signal(modbv(0)[32:])
     adder1 = adder(sum_out, c_out, a_out, b_out, c_in)
-    and_out, or_out, resultado_out, slt = Signal(modbv(0)[32:])
+    and_out, or_out, resultado_out = Signal(modbv(0)[32:])
+    slt = Signal(bool(0))
     # mux4 = mux4way(resultado_out, and_out, or_out, sum_out, slt, selecao)
     zero_out = Signal(bool(0))
 
