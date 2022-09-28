@@ -70,8 +70,39 @@ def exe3(x1, x0, y1, y0, z3, z2, z1, z0):
 
 
 def exe4_ula(a, b, inverte_a, inverte_b, c_in, c_out, selecao, zero, resultado):
+
+    a_inv, b_inv, a_out, b_out= Signal(modbv(0)[32:])
+    mux_a = mux2way(a_out, a, a_inv, inverte_a)
+    mux_b = mux2way(b_out, b, b_inv, inverte_b)
+    sum_out = Signal(modbv(0)[32:])
+    adder1 = adder(sum_out, c_out, a_out, b_out, c_in)
+    and_out, or_out, resultado_out, slt = Signal(modbv(0)[32:])
+    # mux4 = mux4way(resultado_out, and_out, or_out, sum_out, slt, selecao)
+    zero_out = Signal(bool(0))
+
     @always_comb
     def comb():
-        resultado.next = 0
+
+        a_inv = ~a
+        b_inv = ~b
+
+        and_out = a_out & b_out
+        or_out = a_out | b_out
+
+        if selecao == 0:
+            resultado_out = and_out
+        elif selecao == 1:
+            resultado_out = or_out
+        elif selecao == 2:
+            resultado_out = sum_out
+        else:
+            resultado_out = slt
+
+        for i in range(32-1):
+            zero_out = resultado_out[i] or resultado_out[i+1]
+        
+        zero.next = not zero_out
+
+        resultado.next = resultado_out
 
     return instances()
